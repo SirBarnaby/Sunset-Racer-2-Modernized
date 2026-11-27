@@ -1,0 +1,66 @@
+name: Build, test and release
+# Builds the graphics and audio layers with MSVC, assembles the Windows ZIP,
+# plays it on a clean runner (no GPU, no Vulkan) and, when asked, publishes it.
+on:
+  push:
+    branches: [staging]
+    paths: ['native/**', 'packaging/**', 'licenses/**', '.github/**']
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release tag to publish, e.g. v1.0.1 (empty: build and test only)'
+        default: ''
+      notes:
+        description: 'Release notes (Markdown)'
+        default: ''
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Third-party parts and the game folder
+        shell: pwsh
+        run: packaging\fetch.ps1
+      - name: Graphics layer (d3d9.dll)
+        shell: cmd
+        run: native\sr2fx\build.bat
+      - name: Audio layer (dsound.dll)
+        shell: pwsh
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File native\sr2audio\build.ps1
+      - name: Package
+        shell: pwsh
+        run: packaging\package.ps1
+      - name: Screen
+        shell: pwsh
+        run: |
+          Set-DisplayResolution -Width 1920 -Height 1080 -Force -ErrorAction SilentlyContinue
+          Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+          Get-CimInstance Win32_VideoController | Format-List Name, DriverVersion
+          if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) { choco install ffmpeg -y --no-progress | Select-Object -Last 2 }
+      - name: Play the ZIP on a PC without Vulkan
+        shell: pwsh
+        run: .github\smoke\test.ps1 -Zip dist\Sunset-Racer-2-Windows.zip -Out C:\cap
+      - name: Hand screenshots and logs back on a hidden ref
+        if: always()
+        shell: bash
+        run: |
+          [ -d /c/cap ] || exit 0
+          cd /c/cap
+          git init -q && git checkout -q -b cap
+          git -c user.name=smoke -c user.email=smoke@localhost add -A
+          git -c user.name=smoke -c user.email=smoke@localhost commit -qm "smoke ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/capture/smoke
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Sunset-Racer-2-Windows
+          path: dist\Sunset-Racer-2-Windows.zip
+      - name: Publish the release
+        if: github.event_name == 'workflow_dispatch' && inputs.release != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.release }}
+          NOTES: ${{ inputs.notes }}
+        run: gh release create "$TAG" dist/Sunset-Racer-2-Windows.zip --target "$GITHUB_SHA" --title "$TAG" --notes "$NOTES" --latest

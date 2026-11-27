@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.ls text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.exe binary
