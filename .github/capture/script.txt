@@ -1,7 +1,0 @@
-# Stock check: the release exactly as shipped (DXVK d3d9.dll, renderer=1), no clicks.
-wait 15
-shot 00-15s
-wait 15
-shot 01-30s
-wait 15
-shot 02-45s

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="sunset-racer-2-preview.jpg" alt="Sunset Racer 2 main menu at 1920 × 1080" width="100%" />
+  <img src="assets/logo.png" alt="Sunset Racer 2 Modernized logo" width="160" />
 </p>
 
 <h1 align="center">Sunset Racer 2</h1>
@@ -7,14 +7,18 @@
 <p align="center"><em>Sunset Racer 2 Story Mode with widescreen 1080p, smooth motion and a portable Windows build.</em></p>
 
 <p align="center">
-  <a href="https://github.com/SirBarnaby/sunset-racer2/releases/latest/download/Sunset-Racer-2-Windows.zip"><img src="https://img.shields.io/badge/download-Windows%20ZIP-24292f?style=flat" alt="Download the Windows ZIP" /></a>
+  <a href="https://github.com/SirBarnaby/Sunset-Racer-2-Modernized/releases/latest/download/Sunset-Racer-2-Windows.zip"><img src="https://img.shields.io/badge/download-Windows%20ZIP-24292f?style=flat" alt="Download the Windows ZIP" /></a>
   &nbsp;
   <img src="https://img.shields.io/badge/display-1080p-24292f?style=flat" alt="1080p display" />
 </p>
 
+<p align="center">
+  <img src="assets/night-race.gif" alt="A night race through the city in the fog" width="100%" />
+</p>
+
 This is a standalone Windows rebuild of Inludo’s Sunset Racer 2 Story Mode (build 376). It keeps the original racing and adds widescreen rendering, smoother motion and optional visual effects.
 
-<p align="center"><sub><a href="#features">Features</a> · <a href="#install">Install</a> · <a href="#performance">Performance</a> · <a href="#credits">Credits</a></sub></p>
+<p align="center"><sub><a href="#features">Features</a> · <a href="#screenshots">Screenshots</a> · <a href="#install">Install</a> · <a href="#performance">Performance</a> · <a href="#credits">Credits</a></sub></p>
 
 ## Features
 
@@ -23,9 +27,16 @@ This is a standalone Windows rebuild of Inludo’s Sunset Racer 2 Story Mode (bu
 - **DirectX 9 and Vulkan.** Choose a renderer in *Options → Visual effects*. The change takes effect when you enter the next race.
 - **Optional effects and 3D audio.** Tune anti-aliasing, ambient occlusion, motion blur, lighting, weather and Steam Audio reverb in *Options → Visual effects*.
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/main-menu.jpg" alt="Sunset Racer 2 main menu at 1920 × 1080" width="49%" />
+  <img src="assets/race-go.jpg" alt="The start of a race at night" width="49%" />
+</p>
+
 ## Install
 
-1. Download [Sunset-Racer-2-Windows.zip](https://github.com/SirBarnaby/sunset-racer2/releases/latest/download/Sunset-Racer-2-Windows.zip).
+1. Download [Sunset-Racer-2-Windows.zip](https://github.com/SirBarnaby/Sunset-Racer-2-Modernized/releases/latest/download/Sunset-Racer-2-Windows.zip).
 2. Extract the whole ZIP to a folder.
 3. Open the extracted `Sunset Racer 2` folder and run `SunsetRacer2.exe`. Keep the EXE alongside the included files and folders.
 
