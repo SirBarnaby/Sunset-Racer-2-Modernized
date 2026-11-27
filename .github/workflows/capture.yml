@@ -25,7 +25,6 @@ jobs:
         run: |
           Invoke-WebRequest https://github.com/SirBarnaby/Sunset-Racer-2-Modernized/releases/download/v1.0/Sunset-Racer-2-Windows.zip -OutFile game.zip
           Expand-Archive game.zip -DestinationPath C:\sr2
-          if (Test-Path .github\capture\prepare.ps1) { & .github\capture\prepare.ps1 -Game 'C:\sr2\Sunset Racer 2' }
       - name: Play and capture
         shell: pwsh
         run: .github\capture\run.ps1 -Game 'C:\sr2\Sunset Racer 2' -Out C:\cap
