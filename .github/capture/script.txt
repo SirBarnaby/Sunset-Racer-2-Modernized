@@ -5,6 +5,19 @@ wait 1.5
 move 560 692
 wait 1
 click 560 692
-shots 3 01-play 1500
+wait 1.5
 click 560 692
-shots 6 02-play2 2000
+wait 5
+click 620 316
+shots 3 01-profile 1500
+key 52
+key 41
+key 43
+key 45
+key 52
+wait 0.5
+shot 02-typed
+key 0D
+shots 4 03-enter 2000
+click 960 600
+shots 4 04-mid 2000
