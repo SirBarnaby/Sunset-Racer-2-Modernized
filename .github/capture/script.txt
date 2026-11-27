@@ -4,17 +4,9 @@ click 1800 1000
 wait 1
 click 560 692
 wait 5
-shot 01-profiles
 click 620 316
-shots 3 02-profile 1500
-key 52
-key 41
-key 43
-key 45
-key 52
-wait 0.5
-shot 03-typed
-key 0D
-shots 3 04-enter 2000
-click 960 600
-shots 3 05-mid 2000
+wait 4
+click 1424 924
+shots 6 01-created 2000
+click 960 540
+shots 6 02-mid 2000
