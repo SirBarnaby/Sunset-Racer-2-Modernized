@@ -1,9 +1,13 @@
 # wait <s> | shot <name> | shots <n> <prefix> <ms> | click <x> <y> | key <VK hex> [ms] | down/up <VK hex> | rec <s> <name>
-wait 18
-shot 00-boot
-click 590 690
-shots 4 01-play 2500
-click 960 600
-shots 4 02-next 2500
+wait 34
+shot 00-menu
+move 600 692
+wait 1
+click 600 692
+shots 5 01-play 2000
+click 960 540
+shots 5 02-mid 2000
 key 0D
-shots 4 03-enter 2500
+shots 3 03-enter 2000
+key 20
+shots 3 04-space 2000
