@@ -7,6 +7,6 @@ wait 5
 click 620 316
 wait 4
 click 1424 924
-shots 6 01-created 2000
-click 960 540
-shots 6 02-mid 2000
+wait 5
+click 1508 924
+shots 8 01-continue 2000
