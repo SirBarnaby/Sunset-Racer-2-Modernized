@@ -1,0 +1,163 @@
+    0.000 sr2fx loaded, process 7664
+    0.000 settings: renderer 1 aa 0 ao 0 motionblur 0 strength 0 sunshafts 0 | paused 0 speed 0
+    0.001 vulkan: no Vulkan driver (vulkan-1.dll missing), using DirectX 9
+    0.002 system d3d9: C:\Windows\system32\d3d9.dll -> 6CDF0000
+    0.006 Direct3DCreate9(31): DirectX 9
+    0.009 Direct3DCreate9(31): DirectX 9
+    0.009 CreateDevice on DirectX 9, adapter 0 'Microsoft Basic Render Driver', flags 0x42
+    0.009   parameters: 320x320 fmt 21 msaa 0/0 swap 3 windowed 1 autodepth 1 fmt 80 flags 0x0 interval 0x80000000
+    0.013 CreateDevice -> 0x0
+    0.016 device released (real refcount 0)
+    1.688 settings: renderer 0 aa 1 ao 0 motionblur 0 strength 50 sunshafts 0 | paused 0 speed 0
+    1.691 Direct3DCreate9(31): DirectX 9
+    1.691 CreateDevice on DirectX 9, adapter 0 'Microsoft Basic Render Driver', flags 0x42
+    1.691   parameters: 1920x1080 fmt 21 msaa 2/0 swap 1 windowed 1 autodepth 1 fmt 77 flags 0x0 interval 0x80000000
+    1.693 CreateDevice -> 0x0
+    2.843 frames 13 (12.2 fps, avg 82.04 ms, max 109.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    3.866 frames 12 (11.7 fps, avg 85.14 ms, max 100.2 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    4.884 frames 12 (11.8 fps, avg 84.84 ms, max 85.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    5.891 frames 12 (11.9 fps, avg 84.04 ms, max 85.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    6.888 frames 13 (12.8 fps, avg 77.86 ms, max 123.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    7.937 frames 15 (14.3 fps, avg 69.80 ms, max 71.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+    9.021 frames 12 (11.1 fps, avg 88.70 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   10.086 frames 13 (12.2 fps, avg 81.95 ms, max 87.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   11.138 frames 13 (12.4 fps, avg 80.94 ms, max 138.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   12.240 frames 14 (13.6 fps, avg 73.42 ms, max 76.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   13.183 frames 13 (12.8 fps, avg 78.36 ms, max 150.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   14.615 frames 4 (2.9 fps, avg 118.09 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   17.048 frames 3 (1.2 fps, avg 157.10 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   18.088 frames 14 (13.5 fps, avg 74.06 ms, max 77.1 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   19.122 frames 13 (12.5 fps, avg 79.77 ms, max 84.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   20.386 frames 2 (1.8 fps, avg 163.11 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   21.209 frames 11 (11.0 fps, avg 90.70 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   22.254 frames 14 (13.4 fps, avg 74.66 ms, max 76.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   23.826 frames 14 (13.4 fps, avg 74.66 ms, max 76.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   24.638 frames 3 (2.6 fps, avg 191.62 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   25.949 frames 3 (2.0 fps, avg 201.93 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   27.622 frames 4 (2.4 fps, avg 120.82 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   28.662 frames 14 (13.5 fps, avg 74.33 ms, max 77.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   29.954 frames 10 (8.0 fps, avg 96.16 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   30.981 frames 12 (11.4 fps, avg 87.56 ms, max 118.7 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   32.022 frames 10 (9.8 fps, avg 102.52 ms, max 115.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   33.211 frames 8 (7.0 fps, avg 143.22 ms, max 156.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   34.291 frames 7 (6.5 fps, avg 154.33 ms, max 155.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   35.369 frames 7 (6.5 fps, avg 154.18 ms, max 156.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   36.444 frames 7 (6.5 fps, avg 153.57 ms, max 154.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   37.516 frames 7 (6.5 fps, avg 153.44 ms, max 154.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   38.583 frames 7 (6.6 fps, avg 152.34 ms, max 153.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   39.198 settings: renderer 1 aa 1 ao 0 motionblur 0 strength 50 sunshafts 0 | paused 0 speed 0
+   39.649 frames 7 (6.6 fps, avg 152.45 ms, max 154.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   40.725 frames 7 (6.5 fps, avg 153.74 ms, max 161.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   41.787 frames 7 (6.6 fps, avg 151.66 ms, max 153.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   42.860 frames 7 (6.5 fps, avg 153.05 ms, max 155.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   43.931 frames 7 (6.5 fps, avg 153.58 ms, max 158.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   45.143 frames 7 (6.0 fps, avg 166.70 ms, max 204.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   46.321 frames 5 (4.5 fps, avg 220.06 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   47.609 frames 4 (3.3 fps, avg 250.00 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   48.622 frames 3 (2.8 fps, avg 250.00 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   49.523 frames 4 (3.9 fps, avg 236.94 ms, max 250.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   50.441 frames 11 (10.9 fps, avg 91.58 ms, max 172.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   51.512 frames 13 (12.1 fps, avg 82.34 ms, max 84.2 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   52.588 frames 13 (12.1 fps, avg 82.84 ms, max 84.7 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   53.671 frames 12 (11.4 fps, avg 88.00 ms, max 136.1 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   54.707 frames 12 (11.4 fps, avg 87.80 ms, max 109.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   55.707 frames 11 (10.9 fps, avg 92.00 ms, max 95.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   56.733 frames 13 (12.6 fps, avg 79.16 ms, max 84.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   57.757 frames 13 (12.7 fps, avg 78.51 ms, max 83.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   58.807 frames 12 (11.5 fps, avg 87.15 ms, max 164.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   59.834 frames 12 (11.8 fps, avg 84.97 ms, max 93.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   60.832 frames 11 (10.9 fps, avg 91.90 ms, max 95.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   61.882 frames 13 (12.4 fps, avg 80.61 ms, max 84.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   62.932 frames 13 (12.4 fps, avg 80.74 ms, max 82.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   63.971 frames 13 (12.5 fps, avg 80.06 ms, max 81.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   65.028 frames 13 (12.3 fps, avg 81.11 ms, max 90.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   66.097 frames 12 (11.4 fps, avg 87.95 ms, max 94.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   67.123 frames 12 (11.5 fps, avg 87.32 ms, max 108.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   68.144 frames 11 (10.9 fps, avg 91.90 ms, max 179.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   69.211 frames 12 (11.3 fps, avg 88.32 ms, max 92.4 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   70.239 frames 12 (11.5 fps, avg 87.32 ms, max 92.2 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   71.319 frames 12 (11.3 fps, avg 88.62 ms, max 106.7 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   72.393 frames 12 (11.0 fps, avg 90.76 ms, max 105.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   73.408 frames 11 (10.8 fps, avg 92.46 ms, max 109.6 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   74.482 frames 10 (9.6 fps, avg 103.67 ms, max 223.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   75.497 frames 9 (8.9 fps, avg 111.84 ms, max 114.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   76.587 frames 9 (8.3 fps, avg 120.42 ms, max 124.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   77.581 frames 9 (8.9 fps, avg 112.80 ms, max 128.7 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   78.602 frames 10 (9.8 fps, avg 102.07 ms, max 103.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   79.632 frames 10 (9.7 fps, avg 102.86 ms, max 105.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   80.630 frames 10 (9.8 fps, avg 102.55 ms, max 109.5 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   81.730 frames 12 (11.3 fps, avg 88.41 ms, max 92.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   82.702 frames 11 (10.9 fps, avg 91.77 ms, max 114.8 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   83.718 frames 13 (12.8 fps, avg 78.05 ms, max 82.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   84.755 frames 13 (12.4 fps, avg 80.34 ms, max 82.3 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   85.839 frames 13 (12.2 fps, avg 82.26 ms, max 86.2 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   86.879 frames 12 (11.5 fps, avg 86.73 ms, max 91.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   87.912 frames 12 (11.6 fps, avg 85.94 ms, max 88.0 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   88.941 frames 12 (11.7 fps, avg 85.44 ms, max 102.9 ms) main 0 redirected 0 moving objects/frame 0.0 | DirectX 9
+   89.201 device released (real refcount 0)
+   90.729 Direct3DCreate9(31): DirectX 9
+   90.729 CreateDevice on DirectX 9, adapter 0 'Microsoft Basic Render Driver', flags 0x42
+   90.729   parameters: 1920x1080 fmt 21 msaa 2/0 swap 1 windowed 1 autodepth 1 fmt 77 flags 0x0 interval 0x80000000
+   90.732 CreateDevice -> 0x0
+   92.017 frames 9 (7.9 fps, avg 126.67 ms, max 174.5 ms) main 8 redirected 0 moving objects/frame 0.0 | DirectX 9
+   93.104 frames 7 (6.5 fps, avg 154.73 ms, max 165.8 ms) main 7 redirected 0 moving objects/frame 0.0 | DirectX 9
+   94.174 frames 7 (6.7 fps, avg 149.97 ms, max 151.3 ms) main 7 redirected 0 moving objects/frame 0.0 | DirectX 9
+   95.231 frames 6 (5.7 fps, avg 175.90 ms, max 179.8 ms) main 6 redirected 0 moving objects/frame 0.0 | DirectX 9
+   96.275 frames 6 (5.8 fps, avg 173.52 ms, max 176.8 ms) main 6 redirected 0 moving objects/frame 0.0 | DirectX 9
+   97.327 frames 6 (5.7 fps, avg 175.40 ms, max 179.9 ms) main 6 redirected 0 moving objects/frame 0.0 | DirectX 9
+   98.429 frames 6 (5.4 fps, avg 183.90 ms, max 193.9 ms) main 6 redirected 0 moving objects/frame 0.0 | DirectX 9
+   99.529 frames 6 (5.5 fps, avg 180.63 ms, max 190.1 ms) main 6 redirected 0 moving objects/frame 0.0 | DirectX 9
+  100.607 frames 5 (4.8 fps, avg 207.69 ms, max 224.8 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  101.790 frames 5 (4.3 fps, avg 233.59 ms, max 248.9 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  102.931 frames 5 (4.4 fps, avg 229.24 ms, max 243.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  103.997 frames 5 (4.6 fps, avg 212.38 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  105.122 frames 5 (4.5 fps, avg 221.44 ms, max 237.2 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  106.103 frames 4 (4.0 fps, avg 244.80 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  107.076 frames 4 (4.0 fps, avg 226.08 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  108.138 frames 5 (4.9 fps, avg 206.06 ms, max 234.6 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  109.309 frames 5 (4.4 fps, avg 228.89 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  110.451 frames 4 (3.6 fps, avg 217.74 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  111.516 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  112.642 frames 4 (3.6 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  113.784 frames 4 (3.4 fps, avg 249.64 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  114.865 frames 4 (3.7 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  115.946 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  117.152 frames 4 (3.3 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  118.217 frames 4 (3.7 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  119.122 frames 4 (3.8 fps, avg 249.52 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  120.409 frames 4 (3.5 fps, avg 220.46 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  121.439 frames 4 (3.9 fps, avg 249.51 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  122.477 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  123.627 frames 4 (3.5 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  124.632 frames 4 (3.9 fps, avg 249.87 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  125.969 frames 5 (3.9 fps, avg 247.61 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  126.955 frames 4 (3.8 fps, avg 247.32 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  128.227 frames 5 (4.0 fps, avg 248.71 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  129.344 frames 4 (3.5 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  130.409 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  131.460 frames 4 (3.9 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  132.545 frames 4 (3.7 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  133.599 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  134.631 frames 4 (3.8 fps, avg 250.00 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  135.674 frames 4 (3.8 fps, avg 248.22 ms, max 250.0 ms) main 4 redirected 0 moving objects/frame 0.0 | DirectX 9
+  136.917 frames 5 (4.0 fps, avg 247.24 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  138.150 frames 5 (4.1 fps, avg 244.73 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  139.375 frames 5 (4.1 fps, avg 245.97 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  140.618 frames 5 (4.0 fps, avg 246.50 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  141.845 frames 5 (4.0 fps, avg 245.21 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  143.059 frames 5 (4.2 fps, avg 240.25 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  144.302 frames 5 (4.0 fps, avg 244.64 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  145.509 frames 5 (4.2 fps, avg 240.68 ms, max 246.3 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  146.708 frames 5 (4.1 fps, avg 241.20 ms, max 244.4 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  147.908 frames 5 (4.2 fps, avg 240.23 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  149.051 frames 5 (4.3 fps, avg 230.73 ms, max 238.9 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  150.185 frames 5 (4.4 fps, avg 224.73 ms, max 227.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  151.350 frames 5 (4.3 fps, avg 232.16 ms, max 240.1 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  152.479 frames 5 (4.4 fps, avg 226.48 ms, max 239.2 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  153.625 frames 5 (4.3 fps, avg 232.74 ms, max 239.4 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  154.834 frames 5 (4.3 fps, avg 234.23 ms, max 239.4 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  156.049 frames 5 (4.0 fps, avg 245.32 ms, max 250.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  157.259 frames 5 (4.2 fps, avg 240.43 ms, max 246.4 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  158.417 frames 5 (4.2 fps, avg 235.98 ms, max 246.0 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  159.500 frames 5 (4.6 fps, avg 217.33 ms, max 219.1 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
+  160.568 frames 5 (4.7 fps, avg 213.59 ms, max 215.6 ms) main 5 redirected 0 moving objects/frame 0.0 | DirectX 9
