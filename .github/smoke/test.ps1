@@ -30,7 +30,9 @@ $game = Unpack "vulkan"
 Set-Content "$game\SunsetRacer2-fx.ini" "renderer=1"
 New-Item "$game\SunsetRacer2-dev.txt" -ItemType File | Out-Null
 $alive = Play $game "vulkan-race.txt" "$Out\vulkan"
-Get-ChildItem $game -File | Where-Object { $_.Name -match '\.(log|ini)$|trace' } | Copy-Item -Destination "$Out\vulkan"
+foreach ($f in "SunsetRacer2-d3d9.log", "SunsetRacer2_d3d9.log", "SunsetRacer2-audio.log", "SunsetRacer2-fx.ini", "SunsetRacer2-trace.txt") {
+    if (Test-Path "$game\$f") { Copy-Item "$game\$f" "$Out\vulkan\$f" }
+}
 if (-not $alive) { $failed += "vulkan: the game exited" }
 $log = Get-Content "$game\SunsetRacer2-d3d9.log" -Raw -ErrorAction SilentlyContinue
 if (-not $log) { $failed += "vulkan: no graphics layer log" }

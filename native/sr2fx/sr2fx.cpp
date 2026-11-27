@@ -17,6 +17,7 @@
 
 #include "post.h"
 #include "wrappers_gen.h"
+#include <cstdint>
 #include <cstdio>
 #include <cstdarg>
 #include <cstring>
@@ -373,11 +374,10 @@ static HMODULE vulkan_d3d9() {
     return g_vk;
 }
 
-// DXVK answers Direct3DCreate9 even when no GPU can run it (no Vulkan driver,
-// a GPU without Vulkan 1.3, a remote desktop): it then reports no adapters,
-// and the Shockwave 3D Xtra crashes on the adapter it expects. A broken driver
-// can also fault inside DXVK. Both count as "no Vulkan" and the game gets
-// DirectX 9 instead. The checks run under SEH, away from C++ unwinding.
+// Even past the probe below, DXVK may report no adapters (it filters GPUs that
+// lack features it needs), and the Shockwave 3D Xtra crashes on the adapter it
+// expects; a broken driver can fault inside DXVK. Both count as "no Vulkan"
+// and the game gets DirectX 9. The checks run under SEH, away from C++ unwinding.
 static IDirect3D9* vk_create_guarded(PFN_Create9 fn, UINT sdk, DWORD* code) {
     __try {
         return fn(sdk);
@@ -403,8 +403,75 @@ static const char* vk_problem_guarded(IDirect3D9* d, DWORD* code) {
     }
 }
 
+// Asks the Vulkan loader, before DXVK is touched, whether this PC has a GPU
+// DXVK can drive (Vulkan 1.3). DXVK faults when vulkan-1.dll is missing, and a
+// fault inside it can leave the game hung even when caught, so a PC without
+// Vulkan never reaches it. Only the few loader entry points used are declared.
+struct VkAppInfo { int sType; const void* pNext; const char* app; uint32_t appVer; const char* engine; uint32_t engineVer; uint32_t api; };
+struct VkInstInfo { int sType; const void* pNext; uint32_t flags; const VkAppInfo* app; uint32_t layers; const char* const* layerNames; uint32_t exts; const char* const* extNames; };
+typedef void* VkInst;
+typedef void* VkPhys;
+typedef void(__stdcall* PFN_vkVoid)();
+typedef PFN_vkVoid(__stdcall* PFN_vkGetInstanceProcAddr)(VkInst, const char*);
+typedef int(__stdcall* PFN_vkCreateInstance)(const VkInstInfo*, const void*, VkInst*);
+typedef void(__stdcall* PFN_vkDestroyInstance)(VkInst, const void*);
+typedef int(__stdcall* PFN_vkEnumeratePhysicalDevices)(VkInst, uint32_t*, VkPhys*);
+typedef void(__stdcall* PFN_vkGetPhysicalDeviceProperties)(VkPhys, void*);
+static const uint32_t kVk13 = (1u << 22) | (3u << 12);
+
+static const char* vk_probe() {
+    HMODULE loader = LoadLibraryExA("vulkan-1.dll", nullptr, LOAD_LIBRARY_SEARCH_SYSTEM32);
+    if (!loader) return "no Vulkan driver (vulkan-1.dll missing)";
+    auto gipa = (PFN_vkGetInstanceProcAddr)GetProcAddress(loader, "vkGetInstanceProcAddr");
+    if (!gipa) return "vulkan-1.dll has no vkGetInstanceProcAddr";
+    auto create = (PFN_vkCreateInstance)gipa(nullptr, "vkCreateInstance");
+    if (!create) return "no vkCreateInstance";
+    VkAppInfo app = {0, nullptr, "SunsetRacer2", 1, "sr2fx", 1, kVk13};
+    VkInstInfo info = {1, nullptr, 0, &app, 0, nullptr, 0, nullptr};
+    VkInst inst = nullptr;
+    if (create(&info, nullptr, &inst) != 0 || !inst) return "Vulkan instance could not be created";
+    auto destroy = (PFN_vkDestroyInstance)gipa(inst, "vkDestroyInstance");
+    auto enumerate = (PFN_vkEnumeratePhysicalDevices)gipa(inst, "vkEnumeratePhysicalDevices");
+    auto props = (PFN_vkGetPhysicalDeviceProperties)gipa(inst, "vkGetPhysicalDeviceProperties");
+    const char* why = "no GPU with Vulkan 1.3";
+    VkPhys phys[16];
+    uint32_t n = 16;
+    if (enumerate && props && enumerate(inst, &n, phys) >= 0) {
+        // VkPhysicalDeviceProperties: apiVersion first, deviceName at byte 20.
+        static unsigned char buf[4096];
+        for (uint32_t i = 0; i < n && i < 16; i++) {
+            props(phys[i], buf);
+            uint32_t api;
+            memcpy(&api, buf, 4);
+            log_line("vulkan: GPU %u '%.255s' Vulkan %u.%u", i, (const char*)buf + 20, api >> 22, (api >> 12) & 0x3ff);
+            if (api >= kVk13) why = nullptr;
+        }
+    }
+    if (destroy) destroy(inst, nullptr);
+    return why;
+}
+
+static const char* vk_probe_guarded() {
+    __try {
+        return vk_probe();
+    } __except (EXCEPTION_EXECUTE_HANDLER) {
+        return "fault in the Vulkan driver";
+    }
+}
+
+static bool vulkan_available() {
+    static int known = -1;
+    if (known < 0) {
+        const char* why = vk_probe_guarded();
+        if (why) log_line("vulkan: %s, using DirectX 9", why);
+        known = why ? 0 : 1;
+    }
+    return known == 1;
+}
+
 // The Vulkan interface, or null when Vulkan cannot run here (then DirectX 9).
 static IDirect3D9* vulkan_create(UINT sdk) {
+    if (!vulkan_available()) return nullptr;
     HMODULE m = vulkan_d3d9();
     auto fn = m ? (PFN_Create9)GetProcAddress(m, "Direct3DCreate9") : nullptr;
     if (!fn) return nullptr;
