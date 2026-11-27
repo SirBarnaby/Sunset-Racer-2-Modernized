@@ -1,0 +1,37 @@
+# A player who picked Vulkan on a PC that cannot run it (this runner has no
+# Vulkan driver). The game starts with renderer=1 in its ini, then the ini is
+# set to renderer=1 again once the menu has written it, so the race device is
+# asked for on Vulkan too. The game must fall back to DirectX 9 and race.
+# wait <s> | shot <name> | shots <n> <prefix> <ms> | click <x> <y> (hovers 0.9 s first) | key <VK hex> [ms] | down/up <VK hex> | rec <s> <name>
+wait 40
+ini renderer 1
+wait 1
+shot 00-menu
+click 1800 1000
+wait 1
+click 560 692
+wait 3
+click 560 692
+wait 4
+click 620 316
+wait 4
+click 1424 924
+wait 5
+click 1508 924
+wait 8
+shot 01-profile
+click 704 536
+wait 5
+click 1564 924
+shots 6 02-loading 2500
+rec 60 race
+down 26
+shots 6 03-drive 2500
+key 25 400
+shots 3 04-drive 2500
+key 27 400
+shots 3 05-drive 2500
+key 20
+shots 4 06-view 2500
+up 26
+wait 12

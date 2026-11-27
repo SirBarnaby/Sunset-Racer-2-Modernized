@@ -47,3 +47,9 @@ The Director renderer is single-threaded. In project testing, the build held 60 
 ## Credits
 
 Original game by Inludo. The Windows ZIP includes the DXVK and Steam Audio notices in `licenses/`. [Inludo’s Sunset Racer 2 page](https://inludo-game-development.itch.io/sunset-racer-2)
+
+## Building
+
+GitHub Actions builds the release (`.github/workflows/build.yml`) on every push to `staging`. It compiles the graphics layer (`native/sr2fx`, the game's `d3d9.dll`) and the 3D audio layer (`native/sr2audio`, `dsound.dll`) with MSVC 2022, fetches DXVK 3.1.1 and Steam Audio 4.8.1 at pinned checksums, and assembles the ZIP with `packaging/package.ps1`. Then it plays the ZIP on a clean Windows runner with no graphics card or Vulkan driver: once as shipped, and once with Vulkan selected, where the game has to fall back to DirectX 9 and finish a race. To publish, run the workflow by hand with a release tag.
+
+The projector itself (`SunsetRacer2.exe`, its Xtras and assets) is built from the decompiled Lingo with Adobe Director 11.5, which only runs on the owner's PC. The workflow takes that game folder from the v1.0 release.

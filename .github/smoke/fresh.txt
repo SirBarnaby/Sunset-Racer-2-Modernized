@@ -1,0 +1,4 @@
+# The ZIP exactly as a player gets it: start and sit in the menu.
+wait 45
+shot fresh-menu
+wait 15
