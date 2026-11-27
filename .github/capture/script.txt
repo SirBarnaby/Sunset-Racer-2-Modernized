@@ -9,4 +9,12 @@ wait 4
 click 1424 924
 wait 5
 click 1508 924
-shots 8 01-continue 2000
+wait 8
+shot 01-profile
+click 704 536
+shots 8 02-today 2000
+rec 40 race
+down 26
+shots 10 03-drive 2000
+up 26
+wait 20

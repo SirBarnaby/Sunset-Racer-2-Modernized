@@ -17,6 +17,9 @@ jobs:
           Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
           Get-CimInstance Win32_VideoController | Format-List Name, DriverVersion
           Get-Command ffmpeg -ErrorAction SilentlyContinue
+      - name: ffmpeg
+        shell: pwsh
+        run: if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) { choco install ffmpeg -y --no-progress | Select-Object -Last 2 }
       - name: Get the game
         shell: pwsh
         run: |
