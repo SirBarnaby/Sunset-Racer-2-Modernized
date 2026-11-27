@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Sunset Racer 2 Modernized logo" width="160" />
+  <img src="assets/social-preview.png" alt="Sunset Racer 2 poster: the title beside a photocopied night race" width="100%" />
 </p>
 
 <h1 align="center">Sunset Racer 2</h1>
