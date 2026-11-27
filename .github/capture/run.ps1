@@ -28,7 +28,7 @@ foreach ($line in Get-Content "$PSScriptRoot\script.txt") {
   switch ($a[0]) {
     'wait'  { Start-Sleep -Milliseconds ([double]$a[1] * 1000) }
     'shot'  { Shot $a[1] }
-    'click' { [U]::SetCursorPos([int]$a[1], [int]$a[2]); Start-Sleep -Milliseconds 150; [U]::mouse_event(2,0,0,0,[UIntPtr]::Zero); Start-Sleep -Milliseconds 80; [U]::mouse_event(4,0,0,0,[UIntPtr]::Zero) }
+    'click' { [U]::SetCursorPos([int]$a[1], [int]$a[2]); Start-Sleep -Milliseconds 900; [U]::mouse_event(2,0,0,0,[UIntPtr]::Zero); Start-Sleep -Milliseconds 250; [U]::mouse_event(4,0,0,0,[UIntPtr]::Zero) }
     'move'  { [U]::SetCursorPos([int]$a[1], [int]$a[2]) }
     'down'  { [U]::keybd_event([Convert]::ToByte($a[1],16),0,0,[UIntPtr]::Zero) }
     'up'    { [U]::keybd_event([Convert]::ToByte($a[1],16),0,2,[UIntPtr]::Zero) }
