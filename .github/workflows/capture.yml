@@ -3,6 +3,8 @@ on:
   push:
     branches: [staging]
     paths: ['.github/capture/**', '.github/workflows/capture.yml']
+permissions:
+  contents: write
 jobs:
   capture:
     runs-on: windows-2022
@@ -24,6 +26,15 @@ jobs:
       - name: Play and capture
         shell: pwsh
         run: .github\capture\run.ps1 -Game 'C:\sr2\Sunset Racer 2' -Out C:\cap
+      - name: Hand the capture back on a hidden ref
+        if: always()
+        shell: bash
+        run: |
+          cd /c/cap
+          git init -q && git checkout -q -b cap
+          git -c user.name=capture -c user.email=capture@localhost add -A
+          git -c user.name=capture -c user.email=capture@localhost commit -qm "capture ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/capture/latest
       - uses: actions/upload-artifact@v4
         if: always()
         with:
