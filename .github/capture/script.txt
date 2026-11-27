@@ -1,0 +1,9 @@
+# one command per line: wait <s> | shot <name> | click <x> <y> | key <VK hex> [ms] | rec <s> <name>
+wait 20
+shot boot
+click 590 690
+wait 6
+shot afterplay
+click 960 540
+wait 6
+shot after2
