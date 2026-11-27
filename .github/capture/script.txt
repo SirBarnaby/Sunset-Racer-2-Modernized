@@ -1,9 +1,11 @@
 # wait <s> | shot <name> | shots <n> <prefix> <ms> | click <x> <y> (hovers 0.9 s first) | key <VK hex> [ms] | down/up <VK hex> | rec <s> <name>
-wait 34
+wait 40
 click 1800 1000
 wait 1
 click 560 692
-wait 5
+wait 3
+click 560 692
+wait 4
 click 620 316
 wait 4
 click 1424 924
