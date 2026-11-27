@@ -12,9 +12,17 @@ click 1508 924
 wait 8
 shot 01-profile
 click 704 536
-shots 8 02-today 2000
-rec 40 race
+wait 5
+click 1564 924
+shots 6 02-loading 2500
+rec 60 race
 down 26
-shots 10 03-drive 2000
+shots 6 03-drive 2500
+key 25 400
+shots 3 04-drive 2500
+key 27 400
+shots 3 05-drive 2500
+key 20
+shots 4 06-view 2500
 up 26
-wait 20
+wait 12
